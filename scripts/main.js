@@ -15,10 +15,13 @@ const checkBtn = document.getElementById('check-button');
 const numberField = document.getElementById('numberField');
 const langSelectorSpeech = document.getElementById('lang-selector-speech')
 const langSelectorRecognize = document.getElementById('lang-selector-recognize')
+const scoreDisplay = document.getElementById('score')
+const livesDisplay = document.getElementById('lives')
 ///////////////////////////////////////////////////////////////////////////////
 // other globals
 let generatedNum = null;
 let score = 0;
+let lives = 3;
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -51,9 +54,16 @@ checkBtn.addEventListener('click', (e) => {
     const userGuess = numberField.value;
     console.log(`user guess : ${userGuess}, generated num: ${generatedNum}`);
     if (parseInt(userGuess) === generatedNum) {
+      // WIN SITUATION
       body.style = "background-color: #add580;" // green
+      score += 1;
+      scoreDisplay.innerText = score;
+
     } else {
-      body.style = "background-color: #f0d2d3;"
+      // LOSE SITUATION
+      body.style = "background-color: #f0d2d3;" // red
+      lives -= 1;
+      livesDisplay.innerText = lives;
     }
     // reset buttons and number field
     e.currentTarget.disabled = true;
