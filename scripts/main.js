@@ -25,8 +25,9 @@ let score = 0;
 let lives = 3;
 //////////////////////////////////////////////////////////////////////////////
 
-
+//*************************************************************************
 // listeners
+//*************************************************************************
 
 // START BUTTON: generate random number and sythesize speech in selected lang
 startBtn.addEventListener('click', (e)=> {
