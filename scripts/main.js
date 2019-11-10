@@ -8,29 +8,58 @@ import { recognizeSpeech } from "./bin/speechToText.js"
 
 // selectors
 ///////////////////////////////////////////////////////////////////////////////
+const body = document.querySelector('body');
 const startBtn = document.getElementById('start-button');
 const mic = document.getElementById('mic-button');
+const checkBtn = document.getElementById('check-button');
 const numberField = document.getElementById('numberField');
 const langSelectorSpeech = document.getElementById('lang-selector-speech')
 const langSelectorRecognize = document.getElementById('lang-selector-recognize')
 ///////////////////////////////////////////////////////////////////////////////
+// other globals
+let generatedNum = null;
+let score = 0;
+//////////////////////////////////////////////////////////////////////////////
+
 
 // listeners
 
 // START BUTTON: generate random number and sythesize speech in selected lang
 startBtn.addEventListener('click', (e)=> {
-  const num = generateRandomNum();
-  console.log(num);
+  body.style = "background-color: #FFFFFF;"
+  e.currentTarget.disabled = true;
+  mic.disabled = false;
+
+  generatedNum = generateRandomNum();
+  console.log(generatedNum);
   const lang = langSelectorSpeech.value;
   console.log(lang);
-  speak(num, lang);
+  speak(generatedNum, lang);
 });
 
 // MIC: record speech, display result to numberField
 mic.addEventListener('click', (e) => {
-  const lang = langSelectorRecognize.value;
+    const lang = langSelectorRecognize.value;
     recognizeSpeech(lang)
       .then((result) => numberField.value = convertTextToNumber((result)));
+    checkBtn.disabled = false;
+  });
+
+// CHECK BTN: compares guess with generated num
+checkBtn.addEventListener('click', (e) => {
+    // compare guesses
+    const userGuess = numberField.value;
+    console.log(`user guess : ${userGuess}, generated num: ${generatedNum}`);
+    if (parseInt(userGuess) === generatedNum) {
+      body.style = "background-color: #add580;" // green
+    } else {
+      body.style = "background-color: #f0d2d3;"
+    }
+    // reset buttons and number field
+    e.currentTarget.disabled = true;
+    mic.disabled = true;
+    startBtn.disabled = false;
+    numberField.value = "";
   });
 
 // on page load, alert if browser not speech compatible

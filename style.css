@@ -59,6 +59,14 @@ button:disabled {
   padding: 6px 8px;
 
 }
+.player-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-info-el {
+  margin: 20px;
+}
 
 /*.selectors {
   display: flex;
