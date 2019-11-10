@@ -1,10 +1,11 @@
 # sujiru2
 
-web app game for practicing interepreting large numbers.
+web app game for practicing interepreting large numbers between various langauges.
 Currently Chrome only.
 
 Uses webkitSpeechRecognition
 
+test code here: https://clairefro.github.io/sujiru2/#
 
 lanaguage codes
 https://www.science.co.il/language/Locale-codes.php
