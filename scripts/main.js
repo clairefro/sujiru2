@@ -9,7 +9,7 @@ import { recognizeSpeech } from "./bin/speechToText.js"
 // selectors
 ///////////////////////////////////////////////////////////////////////////////
 const startBtn = document.getElementById('start-button');
-const mic = document.getElementById('mic-icon');
+const mic = document.getElementById('mic-button');
 const numberField = document.getElementById('numberField');
 const langSelectorSpeech = document.getElementById('lang-selector-speech')
 const langSelectorRecognize = document.getElementById('lang-selector-recognize')

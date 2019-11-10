@@ -18,13 +18,36 @@ a {
   color: white;
 }
 
+button {
+  border-radius: 6px;
+  padding: 6px 12px;
+  background-color: #611f69;
+  color: white;
+}
+
+button:hover {
+  cursor:pointer;
+}
+
+
+button:disabled {
+  background-color: #9a9a9a;
+  cursor: not-allowed;
+
+}
+
 #start-button {
 
 
 }
 
 #mic-icon {
-  margin-right: 20px;
+  margin-right: 8px;
+  border-radius: 6px;
+}
+
+#mic-icon:hover {
+  color: #611f69;
 }
 
 #numberField {
@@ -37,8 +60,9 @@ a {
 
 }
 
-.selectors {
+/*.selectors {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+*/

@@ -9,18 +9,14 @@
 </head>
 <body>
   <div class="container">
+    <h1>Sujiru</h1>
+    <p>Make sure your volume is on :)</p>
     <div class="avatar">
 
     </div>
 
-    <div class="controls">
-      <a href="#" id="start-button" class="active">Hear number</a>
-      <input type="text" name="" id="numberField"/>
-      <i class="fas fa-microphone" id="mic-icon"></i>
-      <a href="#" id="check-button" class="active">Check Answer</a>
-
-      <div class="selectors">
-          <label for="lang-selector-speech">Hear number in:</label>
+      <!-- <div class="selectors"> -->
+          <label for="lang-selector-speech">Give random number in:</label>
           <select id="lang-selector-speech">
             <option value="en-US">English (US)</option>
             <option value="fr-ca">Français (CA)</option>
@@ -30,7 +26,7 @@
             <option value="ko">한국어</option>
           </select>
 
-          <label for="lang-selector-recognize">Recognize number in:</label>
+          <label for="lang-selector-recognize">Recognize me when I speak:</label>
           <select id="lang-selector-recognize">
             <option value="en-US">English (US)</option>
             <option value="fr-ca">Français (CA)</option>
@@ -40,8 +36,17 @@
             <option value="ko">한국어</option>
           </select>
 
-      </div>
+      <!-- </div> -->
+
+    <div class="controls">
+      <button id="start-button" class="">Give me a number!</button>
+      <input type="text" name="" id="numberField"/>
+      <button id="mic-button" disabled><i class="fas fa-microphone" id="mic-icon"></i>record my guess</button>
     </div>
+
+      <button id="check-button" class="" disabled="">Check Answer</button>
+
+
 
 
 
