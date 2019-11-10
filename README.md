@@ -8,7 +8,7 @@ Uses webkitSpeechRecognition
 test code here: https://clairefro.github.io/sujiru2/#
 
 lanaguage codes
-https://www.science.co.il/language/Locale-codes.php
+https://cloud.google.com/speech-to-text/docs/languages
 
 webkitSpeechRecognition docs
 - https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
