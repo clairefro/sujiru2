@@ -17,6 +17,7 @@ const langSelectorSpeech = document.getElementById('lang-selector-speech')
 const langSelectorRecognize = document.getElementById('lang-selector-recognize')
 const scoreDisplay = document.getElementById('score')
 const livesDisplay = document.getElementById('lives')
+const listeningScreen = document.getElementById('listeningScreen');
 ///////////////////////////////////////////////////////////////////////////////
 // other globals
 let generatedNum = null;
@@ -42,11 +43,12 @@ startBtn.addEventListener('click', (e)=> {
 
 // MIC: record speech, display result to numberField
 mic.addEventListener('click', (e) => {
-    const lang = langSelectorRecognize.value;
-    recognizeSpeech(lang)
-      .then((result) => numberField.value = convertTextToNumber((result)));
-    checkBtn.disabled = false;
-  });
+  const lang = langSelectorRecognize.value;
+  recognizeSpeech(lang)
+    .then((result) => numberField.value = convertTextToNumber((result)));
+  checkBtn.disabled = false;
+});
+
 
 // CHECK BTN: compares guess with generated num
 checkBtn.addEventListener('click', (e) => {
