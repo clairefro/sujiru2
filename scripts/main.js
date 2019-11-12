@@ -38,7 +38,6 @@ startBtn.addEventListener('click', (e)=> {
   const difficulty = document.querySelector('input[name="difficulty"]:checked').value;
 
   generatedNum = generateRandomNum(difficulty);
-  console.log(difficulty);
   console.log(generatedNum);
   const lang = langSelectorSpeech.value;
   console.log(lang);
