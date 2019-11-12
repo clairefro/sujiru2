@@ -1,5 +1,5 @@
 //import grammars
-import { enTextToNumber } from "./bin/grammarEN.js";
+import { enTextToNumber } from "./grammarEN.js";
 
 
 const parseByLang = (input, lang) => {
