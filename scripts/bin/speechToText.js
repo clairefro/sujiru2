@@ -3,18 +3,21 @@ import { enTextToNumber } from "./bin/grammarEN.js";
 
 
 const parseByLang = (input, lang) => {
-  switch(lang) {
-    case "en-US":
+  // switch(lang) {
+  //   case "en-US":
       return enTextToNumber(input);
+
+
     // case "2": // easy
     //   return randomNumEasy();
     // case "3": // medium
     //   return randomNumMedium();
     // case "4": // hard
     //   return randomNumHard();
-    else {
-      return input;
-    }
+
+    // else {
+    //   return input;
+    // }
 };
 
 
