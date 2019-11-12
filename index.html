@@ -16,7 +16,7 @@
 
       </div>
 
-        <!-- <div class="selectors"> -->
+        <div class="langauge-options">
             <label for="lang-selector-speech">Give random number in:</label>
             <select id="lang-selector-speech">
               <option value="en-US">English (US)</option>
@@ -43,7 +43,14 @@
               <option value="it">Italiano</option>
             </select>
 
-        <!-- </div> -->
+        </div>
+            <div class="difficulty-options" style="display:inline">
+              <label for="difficulty">Difficulty: </label>
+                <input type="radio" name="difficulty" value="1"> Super Easy (0-10)
+                <input type="radio" name="difficulty" value="2" checked="checked" > Easy (0-100)
+                <input type="radio" name="difficulty" value="3"> Medium (0-10,000)
+                <input type="radio" name="difficulty" value="4"> Hard (0-999,000,000)
+            </div>
 
       <div class="controls">
         <button id="start-button" class="">Give me a number!</button>

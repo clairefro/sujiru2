@@ -61,9 +61,14 @@ button:disabled {
   margin: 20px;
 }
 
-/*.selectors {
+.difficulty-options {
+  padding: 16px;
+}
+
+.language-options {
+  /*padding: 16px;*/
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-*/
+
+

@@ -15,8 +15,8 @@ const checkBtn = document.getElementById('check-button');
 const numberField = document.getElementById('numberField');
 const langSelectorSpeech = document.getElementById('lang-selector-speech')
 const langSelectorRecognize = document.getElementById('lang-selector-recognize')
-const scoreDisplay = document.getElementById('score')
-const livesDisplay = document.getElementById('lives')
+const scoreDisplay = document.getElementById('score');
+const livesDisplay = document.getElementById('lives');
 const listeningScreen = document.getElementById('listeningScreen');
 ///////////////////////////////////////////////////////////////////////////////
 // other globals
@@ -35,7 +35,10 @@ startBtn.addEventListener('click', (e)=> {
   e.currentTarget.disabled = true;
   mic.disabled = false;
 
-  generatedNum = generateRandomNum();
+  const difficulty = document.querySelector('input[name="difficulty"]:checked').value;
+
+  generatedNum = generateRandomNum(difficulty);
+  console.log(difficulty);
   console.log(generatedNum);
   const lang = langSelectorSpeech.value;
   console.log(lang);
