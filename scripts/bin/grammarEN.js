@@ -1,5 +1,5 @@
 // ex: '3 billion' -> 3000000000
-const convertTextToNumber = (original_input) => {
+const enTextToNumber = (original_input) => {
   let result = 0;
   const bigNumberPattern = /(?:(\d+)\s((?:b|m|tr)illion))/g;
   let matches = null;
@@ -25,4 +25,4 @@ const textToNumber = (num, str) => {
   }
 }
 
-export { textToNumber, convertTextToNumber };
+export { enTextToNumber };

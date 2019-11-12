@@ -1,9 +1,9 @@
 // number algorithms
-import { textToNumber, convertTextToNumber } from "./bin/textToNumber.js";
+
 import { generateRandomNum } from "./bin/generateRandomNum.js";
 // speech-related
 import { speak } from "./bin/textToSpeech.js"
-import { recognizeSpeech } from "./bin/speechToText.js"
+import { recognizeSpeech, parseByLang } from "./bin/speechToText.js"
 
 
 // selectors
@@ -48,7 +48,7 @@ startBtn.addEventListener('click', (e)=> {
 mic.addEventListener('click', (e) => {
   const lang = langSelectorRecognize.value;
   recognizeSpeech(lang)
-    .then((result) => numberField.value = convertTextToNumber((result)));
+    .then((result) => numberField.value = parseByLang(result, lang));
   checkBtn.disabled = false;
 });
 

@@ -1,6 +1,21 @@
-// grammars
+//import grammars
+import { enTextToNumber } from "./bin/grammarEN.js";
 
-const
+
+const parseByLang = (input, lang) => {
+  switch(lang) {
+    case "en-US":
+      return enTextToNumber(input);
+    // case "2": // easy
+    //   return randomNumEasy();
+    // case "3": // medium
+    //   return randomNumMedium();
+    // case "4": // hard
+    //   return randomNumHard();
+    else {
+      return input;
+    }
+};
 
 
 
@@ -27,4 +42,4 @@ const recognizeSpeech = async (lang) => {
 };
 
 
-export { recognizeSpeech };
+export { recognizeSpeech, parseByLang };
